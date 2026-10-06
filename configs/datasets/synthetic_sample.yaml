@@ -1,0 +1,3 @@
+kind: jsonl
+path: data/samples/synthetic_sample.jsonl
+source: synthetic

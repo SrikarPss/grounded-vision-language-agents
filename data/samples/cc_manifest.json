@@ -1,0 +1,14 @@
+[
+  {
+    "image_path": "data/samples/images/login.png",
+    "license": "CC0",
+    "attribution": "synthetic fixture",
+    "hint": "a login button on a page"
+  },
+  {
+    "image_path": "data/samples/images/submit.png",
+    "license": "CC0",
+    "attribution": "synthetic fixture",
+    "hint": "a submit button on a form"
+  }
+]

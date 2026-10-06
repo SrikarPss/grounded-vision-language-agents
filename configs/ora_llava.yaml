@@ -1,0 +1,15 @@
+# Primary method: LLaVA-1.6 + ORA loop (Section 3.4, "Method")
+backend:
+  kind: llava
+  model_id: llava-hf/llava-v1.6-mistral-7b-hf
+  device: cuda
+  quantize: 4bit
+
+agent:
+  kind: ora
+  parser_retries: 1
+  generation:
+    max_new_tokens: 384
+    temperature: 0.2
+    top_p: 0.9
+    structured_output: true

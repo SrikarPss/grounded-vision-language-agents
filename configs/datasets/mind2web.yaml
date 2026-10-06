@@ -1,0 +1,9 @@
+kind: mind2web
+# After one-time preprocessing (scripts/prepare_mind2web.py), the JSONL and
+# images will live under data/mind2web/<split>.jsonl. The default split is
+# test_task; if streaming-mode HF only exposes train, the script falls back
+# and writes train.jsonl instead. Update the path below to whatever the
+# preprocessing step produced.
+jsonl_path: data/mind2web/test_task.jsonl
+images_dir: data/mind2web/images
+limit: 100

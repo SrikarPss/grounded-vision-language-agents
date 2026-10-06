@@ -1,0 +1,4 @@
+kind: synthetic
+jsonl_path: data/synthetic/synthetic.jsonl
+images_dir: data/synthetic
+limit: null

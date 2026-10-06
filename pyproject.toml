@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grounded_vla"
+version = "0.1.0"
+description = "Grounded Vision-Language Agents for Instruction Following"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Grounded VLA Team" }]
+keywords = ["vlm", "agents", "llava", "mind2web", "scienceqa", "react", "lora"]
+
+# Core dependencies required to run the pipeline end-to-end with the mock backend.
+# Heavy, GPU-only dependencies (torch, transformers, bitsandbytes, peft) are
+# kept as optional extras so CI and CPU-only users can still run tests.
+dependencies = [
+    "pillow>=10.0",
+    "numpy>=1.24",
+    "pydantic>=2.5",
+    "pyyaml>=6.0",
+    "tqdm>=4.66",
+    "click>=8.1",
+    "rich>=13.7",
+]
+
+[project.optional-dependencies]
+gpu = [
+    "torch>=2.2",
+    "transformers>=4.40",
+    "accelerate>=0.27",
+    "bitsandbytes>=0.43; platform_system != 'Darwin'",
+    "peft>=0.10",
+    "sentencepiece>=0.2",
+    "einops>=0.7",
+]
+data = [
+    "datasets>=2.18",
+    "huggingface_hub>=0.22",
+    "requests>=2.31",
+]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=4.1",
+    "ruff>=0.4",
+]
+
+[project.scripts]
+grounded-vla = "grounded_vla.cli:cli"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["grounded_vla*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra -q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

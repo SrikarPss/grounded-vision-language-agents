@@ -1,0 +1,8 @@
+ora_llava__scienceqa            n=200  success=0.565  steps=1.23  errors={'none': 113, 'visual_misgrounding': 66, 'reasoning_error': 14, 'truncated': 7}
+ora_llava__synthetic            n= 46  success=0.413  steps=1.70  errors={'none': 19, 'visual_misgrounding': 8, 'truncated': 17, 'action_parsing_failure': 2}
+ora_lora__scienceqa             n=200  success=0.575  steps=1.00  errors={'none': 115, 'visual_misgrounding': 85}
+ora_lora__synthetic             n=200  success=0.920  steps=1.09  errors={'none': 184, 'truncated': 9, 'visual_misgrounding': 3, 'reasoning_error': 4}
+react_mistral__scienceqa        n=200  success=0.235  steps=1.16  errors={'visual_misgrounding': 105, 'action_parsing_failure': 25, 'none': 47, 'reasoning_error': 22, 'truncated': 1}
+react_mistral__synthetic        n= 46  success=0.130  steps=1.11  errors={'none': 6, 'reasoning_error': 19, 'action_parsing_failure': 8, 'truncated': 6, 'visual_misgrounding': 7}
+single_shot_llava__scienceqa    n=200  success=0.465  steps=1.00  errors={'none': 93, 'visual_misgrounding': 53, 'reasoning_error': 28, 'action_parsing_failure': 26}
+single_shot_llava__synthetic    n= 46  success=0.370  steps=1.00  errors={'none': 17, 'visual_misgrounding': 19, 'action_parsing_failure': 5, 'reasoning_error': 5}

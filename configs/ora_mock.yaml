@@ -1,0 +1,15 @@
+# CPU-only smoke config. Uses the deterministic mock backend so CI and
+# reviewers without GPUs can still run the full pipeline.
+backend:
+  kind: mock
+  supports_vision: true
+  policy: oracle
+
+agent:
+  kind: ora
+  parser_retries: 1
+  generation:
+    max_new_tokens: 128
+    temperature: 0.0
+    top_p: 1.0
+    structured_output: true

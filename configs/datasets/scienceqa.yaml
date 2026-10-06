@@ -1,0 +1,5 @@
+kind: scienceqa
+hf_split: test
+images_dir: data/scienceqa/images
+only_with_image: true
+limit: 200

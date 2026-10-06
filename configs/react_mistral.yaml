@@ -1,0 +1,14 @@
+# Baseline 1: Mistral-7B + ReAct text-only
+backend:
+  kind: mistral
+  model_id: mistralai/Mistral-7B-Instruct-v0.2
+  device: cuda
+  quantize: 4bit
+
+agent:
+  kind: react
+  generation:
+    max_new_tokens: 384
+    temperature: 0.2
+    top_p: 0.9
+    structured_output: true

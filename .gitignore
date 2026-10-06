@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# Caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Model weights / datasets / runs (never commit these)
+checkpoints/
+weights/
+runs/
+outputs/
+.hf_cache/
+data/mind2web/
+data/scienceqa/
+data/synthetic/raw/
+data/synthetic/images/
+
+# Allow sample fixtures (tiny) to be committed
+!data/samples/

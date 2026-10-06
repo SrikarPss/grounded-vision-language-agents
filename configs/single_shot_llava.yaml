@@ -1,0 +1,14 @@
+# Baseline 2: LLaVA-1.6 single-step zero-shot (no agentic loop)
+backend:
+  kind: llava
+  model_id: llava-hf/llava-v1.6-mistral-7b-hf
+  device: cuda
+  quantize: 4bit
+
+agent:
+  kind: single_shot
+  generation:
+    max_new_tokens: 256
+    temperature: 0.0
+    top_p: 1.0
+    structured_output: true
